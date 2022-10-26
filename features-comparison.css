@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.true,
+.false{
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    left: -40px;
+    top: 12px;
+    cursor: pointer;
+}
+.true{
+    background-color: #226f54;
+}
+.true::before {
+    width: 3px;
+    height: 8px;
+    rotate: 496deg;
+    top: 11px;
+    left: 7px;
+}
+.false::before,
+.false::after,
+.true::after,
+.true::before{
+    content: '';
+    position: absolute;
+    background-color: #fff;
+}
+.true::after {
+    width: 3px;
+    height: 14px;
+    rotate: -316deg;
+    top: 6px;
+    left: 13px;
+}
+.false{
+    background-color: red;
+}
+.false::before,
+.false::after{
+    width: 3px;
+    height: 14px;
+    left: 11px;
+    top: 5px;
+}
+.false::before{
+    rotate: 318deg;
+}
+.false::after{
+    rotate: -310deg;
+}
+.container{
+    width: 1100px;
+    margin: 85px auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container .basic,
+.container .professional{
+    width: 49%;
+    
+}
+.container .basic h2{
+    background-color: #ef4b4c;
+}
+.container .professional h2{
+    background-color: #009ffd;
+}
+.container h2{
+    color: #fff;
+    padding: 20px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+.container .content{
+    background-color: #fff;
+
+}
+.container .content p{
+    left: 60px;
+    position: relative;
+    padding: 15px 0;
+}
+.line{
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: #eee
+}
+.qu{
+    background-color: #777;
+    color: #fff;
+    padding: 5px 7px;
+    font-weight: bold;
+    border-radius: 50%;
+    right: 85px;
+    top: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+span.save {
+    right: 180px;
+    position: absolute;
+    top: 20px;
+    background: #009ffd;
+    color: #fff;
+    font-weight: bold;
+    padding: 10px;
+    height: 40px;
+}
+
+span.save::after{
+    content: '';
+    position: absolute;
+    top: 0px;
+    right: -40px;
+    border-width: 20px;
+    border-style: solid;
+    border-color: #009ffd transparent #009ffd #009ffd;
+}
